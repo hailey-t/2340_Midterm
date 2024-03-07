@@ -34,7 +34,7 @@ public class AppointmentManager {
     public void scheduleAppointment(User user, Map<Doctor, Float> recommendedDoctors) {
         Appointment potentialAppointment = *GET APPOINTMENT*; // prompt user to select date/time
         Doctor chosenDoctor = *CHOOSE DOCTOR*; // prompt user to select doctor from list
-        if (potentialAppointent.getTime() is available for chosenDoctor) {
+        if (potentialAppointent.getTime() is available for chosenDoctor and chosenDoctor accepts appointment) {
             // 1. Add appointment to both user and doctor schedules
             // 2. Send appointment confirmation to user and doctor
         } else {
