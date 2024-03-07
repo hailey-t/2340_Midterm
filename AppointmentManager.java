@@ -30,14 +30,17 @@ public class AppointmentManager {
     }
 
     // Method to schedule an appointment
-    public boolean scheduleAppointment(User user, Doctor recommendedDoctors) {
-        Appointment potential = *GET APPOINTMENT*; // prompt user to selecte date/time
-        if (appointment time works for doctor) {
+    public boolean scheduleAppointment(User user, Map<Doctor, Float> recommendedDoctors) {
+        Appointment potentialAppointment = *GET APPOINTMENT*; // prompt user to select date/time
+        Doctor chosenDoctor = *CHOOSE DOCTOR*; // prompt user to select doctor from list
+        if (potentialAppointent.getTime() is available for chosenDoctor) {
             // 1. Add appointment to both schedules
             // 2. Send appointment confirmation to doctor and user
             // 3. Return true
+        } else {
+            // alternativeCase
+            handleMatchingFailure(user, recommendedDoctors, chosenDoctor);
         }
-        // Return false
     }
     
     // Method to recommend doctors based on user symptoms, discomfort level, and insurance coverage
@@ -56,15 +59,10 @@ public class AppointmentManager {
         Doctor bestMatch = highest compatibility doctor from hash map;
         attemptCreateAppointment(user, bestMatch);
     }
-    
-    // Alternative scenario when no matches are found
-    public Doctor noMatchesFound() {
-        // Logic when no matches are found
-        return null;
-    }
 
-    // Alternative scenario when preferred doctor is unavailable
-    public void preferredDoctorUnavailable(User user, HashMap<Doctor, Float> recommendedDoctors, Doctor bestDoctor) {
+
+    // Alternative scenario when preferred doctor is unavailable or no matches found
+    public void handleMatchingFailure(User user, HashMap<Doctor, Float> recommendedDoctors, Doctor bestDoctor) {
         // Step 1: inform user doctor was unavailable
         switch (prompt user for choice to proceed)
             case otherDoctor:
