@@ -30,14 +30,16 @@ public class AppointmentManager {
     }
 
     // Method to schedule an appointment
-    public void scheduleAppointment(User user, Appointment appointment, Doctor recommendedDoctors) {
-        // Logic to schedule an appointment for the user
-        // If appointment time works for doctor:
-        //     1. Add appointment to both schedules
-        //     2. Return true
-        // Otherwise, return false
+    public boolean scheduleAppointment(User user, Doctor recommendedDoctors) {
+        Appointment potential = *GET APPOINTMENT*; // prompt user to selecte date/time
+        if (appointment time works for doctor) {
+            // 1. Add appointment to both schedules
+            // 2. Send appointment confirmation to doctor and user
+            // 3. Return true
+        }
+        // Return false
     }
-
+    
     // Method to recommend doctors based on user symptoms, discomfort level, and insurance coverage
     public List<Doctor> recommendDoctors(String symptoms, int discomfortLevel, String healthInsurance) {
         // Logic to recommend doctors based on user's symptoms, discomfort level, and insurance coverage
@@ -53,18 +55,6 @@ public class AppointmentManager {
         }
         Doctor bestMatch = highest compatibility doctor from hash map;
         attemptCreateAppointment(user, bestMatch);
-    }
-
-    public void attemptCreateAppointment(User user, Doctor doctor) {
-        if (scheduleAppointment(user, chooseAppointment(), doctor) {
-            // send appointment confirmation to doctor and user
-        } else {
-            preferredDoctorUnavailable(user, recommendedDoctors, bestDoctor);
-        }
-    }
-    
-    public Appointment chooseAppointment(user) {
-        // prompts user to choose a date for schedule and returns the corresponding appointment object)
     }
     
     // Alternative scenario when no matches are found
