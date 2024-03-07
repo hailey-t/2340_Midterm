@@ -15,6 +15,11 @@ public class AppointmentManager {
         appointments = new ArrayList<>();
     }
 
+    public boolean registerUser(User user) {
+        users.add(user);
+        // return if this was successful
+    }
+    
     // Method to get the single instance of AppointmentManager
     // This also ensures only one instance of AppointmentManager can exist at a time
     public static AppointmentManager getInstance() {
