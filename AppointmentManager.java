@@ -46,7 +46,7 @@ public class AppointmentManager {
     // Method to recommend doctors based on user symptoms, discomfort level, and insurance coverage
     public void recommendDoctors(User user, String symptoms, int discomfortLevel, String healthInsurance) {
         // Logic to recommend doctors based on user's symptoms, discomfort level, and insurance coverage
-        // Returns a list of recommended doctors
+        // Gives a list of recommended doctors
         Map<Doctor, Float> recommendedDoctors = new HashMap<>();
         for (Doctor d : allDoctors) {
             // Evaluate compatability and update recommended doctors map if compatibility > 0
